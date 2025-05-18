@@ -5,6 +5,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
+        width: "100%",
         textAlign: "center",
         py: 2,
         borderTop: "1px solid #ddd",

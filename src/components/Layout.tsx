@@ -9,13 +9,7 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh", // full viewport height
-      }}
-    >
+    <>
       <Header />
       <Box
         component="main"
@@ -23,14 +17,11 @@ export default function Layout({ children }: LayoutProps) {
           maxWidth: 1024,
           mx: "auto",
           px: 2,
-          flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
         }}
       >
         {children}
       </Box>
       <Footer />
-    </Box>
+    </>
   );
 }

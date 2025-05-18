@@ -15,17 +15,10 @@ const GlobalStyles = () => (
         min-height: 100vh;
         font-family: "Roboto", sans-serif;
         background-color: #fafafa;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
-      }
-
-      main {
-        flex-grow: 1;
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
       }
     `}
   />

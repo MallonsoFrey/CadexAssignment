@@ -2,6 +2,8 @@
 import { css } from "@emotion/react";
 
 const container = css`
+  width: 100%;
+  max-width: 1024px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,8 +53,8 @@ export default function VideoContent() {
       </div>
       <div css={videoSection}>
         <iframe
-          width="560"
-          height="315"
+          width="100%"
+          height="100%"
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
           title="Learning Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
