@@ -15,6 +15,7 @@ export default function Layout({ children }: LayoutProps) {
         component="main"
         sx={{
           maxWidth: 1024,
+          minHeight: "calc(100vh - 100px)",
           mx: "auto",
           px: 2,
         }}
