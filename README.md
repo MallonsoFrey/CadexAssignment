@@ -36,21 +36,30 @@ This project is a simple React-based two-page website featuring a main page and 
    # or
    yarn install
 
-3. **Run development server:**
+3. **Local development:**
 
+   This project includes both a frontend built with Vite and React, and backend API routes implemented as Vercel Serverless Functions.
+
+- To run the **full local environment**, including the frontend and backend API routes (serverless functions), use:
+
+   ```bash
+   vercel dev
+
+- To run **only the frontend** development server (without backend API support), use:
+  
    ```bash
    npm run dev
    # or
    yarn dev
 
-4. **Build for production:**
+5. **Build for production:**
 
    ```bash
    npm run build
    # or
    yarn build
 
-5. **Start preview of production build:**
+6. **Start preview of production build:**
 
    ```bash
    npm run preview
