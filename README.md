@@ -1,54 +1,100 @@
-# React + TypeScript + Vite
+# Simple Two-Page Website with Contact Form and Backend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React-based two-page website featuring a main page and a contact page with a functional contact form. The form submissions are handled by a basic backend implemented as a serverless function. The project uses Vite, TypeScript, Material UI, and Emotion for styling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+- **Main Page (`/`)**: Basic landing page with introduction content.
+- **Contact Page (`/contact-us`)**: Contact form collecting name, email, and message.
+- **Backend API**: Serverless function (deployed on Vercel) to handle contact form submissions and respond with a confirmation message.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React** — Frontend UI library
+- **Vite** — Development and build tool
+- **TypeScript** — Static typing for JavaScript
+- **Material UI (MUI)** — UI component library
+- **Emotion** — CSS-in-JS styling solution
+- **Vercel Serverless Functions** — Backend API for form submissions
+  
+---
+## Setup Instructions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+
+3. **Run development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+
+4. **Build for production:**
+
+   ```bash
+   npm run build
+   # or
+   yarn build
+
+5. **Start preview of production build:**
+
+   ```bash
+   npm run preview
+   # or
+   yarn preview
+
+## Hosting on Vercel
+- The frontend is deployed as a static site.
+- The backend is implemented as Vercel Serverless Functions under the /api directory.
+- Deploy with zero-configuration using the Vercel CLI or connect your GitHub repository to Vercel.
+
+## Styling
+- **Material UI** is used for pre-built accessible UI components.
+- **Emotion** is used for CSS-in-JS styling, allowing scoped styles and theming.
+- Responsive design principles are applied (e.g., max-width containers, flexible layouts).
+- Global styles set via Emotion’s <Global /> component include resets and base typography.
+
+## SEO Considerations
+- Semantic HTML elements (e.g., <main>, <header>, <footer>) are used to structure content.
+- Page titles and meta tags should be added to each page (can be extended using React Helmet or Next.js Head).
+- Form accessibility is considered by using labels and proper input types.
+- URLs are clean and descriptive (e.g., /contact-us).
+
+## Performance Choices
+- The site uses Vite for fast development and optimized builds.
+- Components are lightweight, and code splitting can be applied if needed.
+- Static assets and serverless functions keep deployment simple.
+- Minimal external dependencies to reduce bundle size.
+
+## Additional info
+- Backend API is simple and only logs contact requests without persistent storage.
+- The serverless function responds immediately with a success message.
+- No user authentication or advanced form validation beyond basic required fields.
+- Project is intended as a demo or assignment rather than a production-ready app.
+- Deployment is on Vercel due to its built-in support for frontend + serverless backend.
+
+## Folder Structure (Simplified)
+/
+├─ api/                # Serverless backend functions (e.g., contact.ts)
+├─ src/
+│  ├─ components/      # React components (Header, Footer, ContactForm, etc.)
+│  ├─ pages/           # MainPage.tsx, ContactPage.tsx
+│  ├─ styles/          # Global styles and theme
+│  └─ App.tsx          # Main React app router
+├─ package.json
+├─ tsconfig.json
+└─ README.md
