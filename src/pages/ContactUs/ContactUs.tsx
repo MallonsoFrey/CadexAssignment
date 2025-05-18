@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { TextField, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const formContainer = css`
   max-width: 600px;
@@ -50,6 +51,9 @@ export default function ContactUs() {
         <Typography variant="h5" color="primary" align="center">
           {responseMessage}
         </Typography>
+        <Button component={Link} to="/" variant="contained" color="secondary">
+          Go back
+        </Button>
       </div>
     );
   }
