@@ -26,7 +26,7 @@ This project is a simple React-based two-page website featuring a main page and 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git](https://github.com/MallonsoFrey/CadexAssignment.git
    cd your-repo
 
 2. **Install dependencies:**
