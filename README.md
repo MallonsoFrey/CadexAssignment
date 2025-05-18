@@ -4,6 +4,13 @@ This project is a simple React-based two-page website featuring a main page and 
 
 ---
 
+## Deployment
+
+This project is deployed on Vercel and available at:  
+[https://cadex-assignment.vercel.app](https://cadex-assignment.vercel.app)
+
+---
+
 ## Project Overview
 
 - **Main Page (`/`)**: Basic landing page with introduction content.
@@ -11,6 +18,7 @@ This project is a simple React-based two-page website featuring a main page and 
 - **Backend API**: Serverless function (deployed on Vercel) to handle contact form submissions and respond with a confirmation message.
 
 ---
+
 ## Tech Stack
 
 - **React** — Frontend UI library
@@ -26,7 +34,7 @@ This project is a simple React-based two-page website featuring a main page and 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git](https://github.com/MallonsoFrey/CadexAssignment.git
+   git clone https://github.com/MallonsoFrey/CadexAssignment.git
    cd your-repo
 
 2. **Install dependencies:**
@@ -36,21 +44,30 @@ This project is a simple React-based two-page website featuring a main page and 
    # or
    yarn install
 
-3. **Run development server:**
+3. **Local development:**
 
+   This project includes both a frontend built with Vite and React, and backend API routes implemented as Vercel Serverless Functions.
+
+- To run the **full local environment**, including the frontend and backend API routes (serverless functions), use:
+
+   ```bash
+   vercel dev
+
+- To run **only the frontend** development server (without backend API support), use:
+  
    ```bash
    npm run dev
    # or
    yarn dev
 
-4. **Build for production:**
+5. **Build for production:**
 
    ```bash
    npm run build
    # or
    yarn build
 
-5. **Start preview of production build:**
+6. **Start preview of production build:**
 
    ```bash
    npm run preview
