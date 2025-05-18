@@ -7,7 +7,7 @@ This project is a simple React-based two-page website featuring a main page and 
 ## Deployment
 
 This project is deployed on Vercel and available at:  
-[https://cadex-assignment.vercel.app]([https://your-vercel-project-url.vercel.app](https://cadex-assignment.vercel.app))
+[https://cadex-assignment.vercel.app](https://cadex-assignment.vercel.app)
 
 ---
 
