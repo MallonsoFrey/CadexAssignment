@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import { Button } from "@mui/material";
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
+import { contentCoffee } from "../../lib/contentCoffee";
 
 const containerStyle = css`
   max-width: 960px;
@@ -14,6 +15,7 @@ const containerStyle = css`
 `;
 
 const cardsGrid = css`
+  max-width: 960px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
@@ -31,14 +33,16 @@ const buttonStyle = css`
 `;
 
 const CardContent = () => {
-  const cards = Array.from({ length: 6 });
-
   return (
     <section css={containerStyle}>
-      <h1 css={titleStyle}>Also Very Important Title</h1>
+      <h1 css={titleStyle}>Coffee Types</h1>
       <div css={cardsGrid}>
-        {cards.map((_, index) => (
-          <Card key={index} />
+        {contentCoffee.map((item) => (
+          <Card
+            key={item.id}
+            title={item.title}
+            description={item.description}
+          />
         ))}
       </div>
       <Button

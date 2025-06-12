@@ -43,23 +43,23 @@ export default function VideoContent() {
   return (
     <section css={container}>
       <div css={textSection}>
-        <h1>Most important title on the page</h1>
+        <h1>What the Coffee</h1>
+        <p>Ever wonder what makes your morning cup so magical?</p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis rerum
-          temporibus, sunt pariatur natus officia reprehenderit tenetur vel
-          ducimus! Illum facere porro voluptas reprehenderit voluptatem
-          exercitationem dicta distinctio earum sunt.
+          Whether you're team espresso, latte, or cold brew, you're in the right
+          place. Welcome to the weird, wonderful, and wildly caffeinated world
+          of coffee.
         </p>
       </div>
       <div css={videoSection}>
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          src="https://www.youtube.com/watch?v=N6BJVM5tvnw&pp=ygUMI2N1cnZlY2FmZmVl"
           title="Learning Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        />{" "}
+        />
       </div>
     </section>
   );

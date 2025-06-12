@@ -1,13 +1,26 @@
-const Card = () => {
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+
+interface ICoffee {
+  title: string;
+  description: string;
+}
+
+const cardStyle = css`
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const Card = ({ title, description }: ICoffee) => {
   return (
-    <div className="card">
-      <h2>Title</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
-        nemo itaque ex inventore tempora laborum, magnam dolore eaque numquam
-        dolor, veritatis officiis vitae, maiores corporis optio exercitationem
-        molestiae est rem?
-      </p>
+    <div css={cardStyle}>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   );
 };
